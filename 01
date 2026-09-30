@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Notas {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("bem vindo!! ");
+        // nome do fundo
+        System.out.println("digite o nome do fundo:");
+        String fundo = scanner.next();
+        // valor da taxa
+        System.out.println("taxa de juros CDB");
+        double juros = scanner.nextInt();
+
+        // teto regualario nao pode ultrapassar 13,00
+        double tetoreg = (13.00);
+        boolean risco = false;
+        if (juros > tetoreg) {
+            risco = true;
+            System.out.println("[ALERTA CRÍTICO]");
+            System.out.println("A taxa CDB está acima do teto regulatório\nAlerta de risco");
+
+        }
+
+        else {
+            risco = false;
+            System.out.println("taxa normal");
+
+        }
+
+    }
+
+}
